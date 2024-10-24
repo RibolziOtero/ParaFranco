@@ -1,0 +1,355 @@
+* {
+    margin: 0 auto; /* centra vertical y horizontamente, en este caso todos los contenedores entre sí*/
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    padding: 0; /*Afecta vertical y horizontalmente*/
+    box-sizing: border-box; /* Asegura que el padding esté dentro del ancho especificado. Con ponerlo una sola vez debería alcanzar. */
+    
+}
+
+body {
+    background-color: rgb(29, 80, 114);
+    color: #f19136;
+    background-image: url(img/texturafondo.jpg);
+    background-size: cover; /* Ajusta la imagen para cubrir todo el área del fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center; /* Centra la imagen en el fondo */
+}
+/*Si aplicas un color en el selector body, afectará a todo el contenido textual que se encuentre dentro del <body>, 
+incluyendo todos los elementos de texto, como <p>, <h1>, <h2>, <li>, etc. Por lo tanto, no solo a los párrafos.*/
+
+
+
+
+
+header {
+    border-color: #f19136;
+    border-style: solid;
+    border-width: 3px;
+    text-align: center; 
+    width: 75%;
+    padding: 20px 0px;
+
+    background-color: #212b2c;
+    color: white;
+
+}
+/*el width siempre afecta el ancho del contenedor en relación al contenedor padre*/
+
+
+
+
+
+
+nav {
+    border-color: #f19136;
+    border-style: solid;
+    border-width: 3px;
+    text-align: center;
+    width: 75%;
+    padding: 20px 30px;
+
+    background-color: #f19136;
+}
+
+nav ul {
+    display: flex; /* Usa Flexbox para los elementos */
+    justify-content: space-between; /* Espacio entre los elementos */
+    list-style-type: none; /* Elimina los puntos de la lista */
+}
+
+/*Cómo Funciona display: flex;
+Modelo de Caja de Flexbox: Cuando aplicas display: flex; a un contenedor, cambias su modelo de caja a Flexbox. Esto afecta cómo se distribuyen y alinean los elementos hijos (en este caso, los elementos <li>).
+Dirección de los Elementos: Por defecto, Flexbox alinea los elementos en una fila (horizontalmente). Esto es diferente del comportamiento estándar de las listas (<ul> y <li>), que normalmente se apilan verticalmente.
+Justificación del Espacio: Al utilizar justify-content: space-between;, indicas cómo se distribuye el espacio disponible entre los elementos. Esto no solo alinea los elementos horizontalmente, sino que también se asegura de que haya un espacio uniforme entre ellos, empujando el primer elemento hacia el inicio del contenedor y el último elemento hacia el final. */
+
+nav ul li {
+    flex: 1; /* Cada li ocupa el mismo espacio */
+    text-align: center; /* Centra el texto en cada li */
+}
+
+nav ul li a:hover {
+    color: #ffffff; /* Cambia el color del texto al pasar el cursor */
+}
+
+nav a {
+    color: #0d479e;
+    font-size: 20px;
+}
+
+
+
+
+
+main {
+    border-color: #f19136;
+    border-style: solid;
+    border-width: 3px;
+    width: 75%;
+    background-color: #212b2c;
+    color: #f19136;
+}
+
+
+
+
+
+.fotoretrato {
+    display: block; /* Hace que la imagen sea un bloque para aplicar el margen y otras cosas*/
+
+    width: 30%; /* Ajusta el ancho de la imagen al 30% del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-color: #f19136;
+    border-style: solid;
+    border-width: 2px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+
+
+
+
+fieldset {
+    width: 50%;
+    border: 2px solid #ddd;
+    margin-top: 15px;
+}
+
+fieldset p:first-of-type {
+    margin-top: 16px;
+  
+
+}
+
+fieldset input, 
+fieldset textarea, 
+fieldset select {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+
+
+legend {
+    margin:auto;
+    color: #ffb013;
+}
+
+.boton-contenedor {
+    text-align: center; /* Centra el contenido dentro del div*/
+    width: 70%;
+    margin-top: 15px;
+}
+
+.boton-submit {
+    background-color: #4CAF50; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 18px; /* Tamaño del texto */
+    padding: 15px;
+}
+
+.boton-submit:hover {
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    background-color: #207f25; /* Color al pasar el cursor */
+}
+
+
+
+table {
+    border-collapse: collapse; /*Esto siempre debe ir en tablas*/
+    border-spacing: 0;
+    width: 50%;
+    border: 2px solid #ddd;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    table-layout: auto; /* Asegura que el ancho de las columnas se ajuste automáticamente */
+}
+
+th {
+    background-color: #f19136;
+    border: 2px solid #ffd1a6;
+    padding: 7px;
+    color: white;
+    text-align: center;
+}
+
+td {
+    border: 1px solid #ddd;
+    padding: 7px;
+    text-align: left;
+}
+
+
+
+
+
+
+
+footer {
+    border-color: #f19136;
+    border-style: solid;
+    border-width: 3px;
+    text-align: center; 
+    width: 75%;
+    padding: 20px 0px;
+
+    background-color: #f19136;
+    color: rgb(6, 6, 6);
+}
+
+/*
+El atributo text-align en CSS alinea el contenido en línea (como texto, imágenes en línea, enlaces, etc.) dentro de un contenedor, pero no alinea todo el contenedor en sí.
+
+Elementos en línea o en línea-bloque como <span>, <img>, o <a> dentro de un contenedor se verán afectados por text-align.
+Elementos de bloque como <div>, <section>, o <header> no se verán afectados por text-align. Sin embargo, el texto dentro de estos elementos sí se alineará de acuerdo con la propiedad text-align. 
+*/
+
+
+
+
+
+main {
+    min-height: 600px;
+    padding: 20px 20px;
+    text-align: left;
+}
+
+main p {
+
+}
+
+
+section {
+    padding:  0
+}
+
+
+.section-index h3 {
+    margin: 0;
+    margin-bottom: 16px;
+}
+
+.section-index p {
+    margin: 0 15px;
+    margin-bottom: 16px;
+}
+
+
+
+.section-contacto h3 {
+    margin: 0;
+    margin-bottom: 16px;
+}
+
+.section-contacto p {
+    margin: 0 16px;
+    margin-bottom: 16px;
+}
+
+
+footer .p1 {
+    margin-bottom: 16px;
+}
+
+
+
+
+/* LABORATORIO 4: */
+
+/* -En cada página debe añadirse una flecha apuntando hacia arriba dentro de un círculo al final de la página hacia la derecha que permita volver al inicio al hacer clic. */
+
+main {
+    position: relative; /* Establece el contenedor principal como relativo */
+}
+
+.boton-flecha-contenedor {
+    position: absolute; /* Posiciona el botón de manera absoluta dentro del contenedor */
+    right: -80px; 
+    bottom: 0px; 
+}
+
+.boton-subir {
+    width: 70px;
+    height: 70px;
+    background-color: #f19136; /* Color de fondo */
+    color: rgb(255, 255, 255); /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 50%; /* Bordes redondeados */
+    font-size: 40px; /* Tamaño del texto */
+    text-align: center;
+    border-color: #ffffff;
+    border-style: solid;
+    border-width: 4px;
+    padding-bottom: 8px;
+    
+}
+
+.boton-subir:hover {
+    cursor: pointer;
+    background-color: #ffb013; /* Color al pasar el cursor */
+}
+
+
+/* -En todas las páginas se debe ver un encabezado fijo en la parte superior aunque el usuario avance en la pantalla. */
+.fijo {
+    position: fixed; 
+    top: 125px; 
+    left: 50%;
+    transform: translateX(-50%); /* Centra el encabezado */
+    width: 75%; 
+    background-color: #444; 
+    color: white; 
+    padding: 5px; 
+    text-align: center; 
+    z-index: 1000; 
+}
+
+/* - Incluir el uso de al menos una fuente web */
+.fijo h2 {
+    font-family: 'Playwrite GB S', sans-serif;
+}
+
+header {
+    padding-bottom: 60px;
+}
+
+
+/* -Modificar el texto del “Acerca de” de forma que la primera línea se vea fija (sticky). El artículo deberá tener un alto máximo de 300px y en caso de ser necesario se deberá mostrar una barra de desplazamiento. */
+.section-acercade {
+    max-height: 300px;         /* Limita la altura del section */
+    overflow-y: auto;          /* Activa la barra de desplazamiento */
+    border: 3px solid #ddd;    /* (Opcional) Borde para visualización */
+    padding: 20px;
+
+  }
+  
+.acerca-de-sticky {
+    position: sticky;          /* Hace que este h3 sea "sticky" */
+    top: 0;                    /* Fija en la parte superior al hacer scroll */
+    background-color: #ffffff;   /* Asegura que no se superponga el contenido */
+    padding: 10px;             /* Espacio alrededor del encabezado */
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    text-align: center;
+}
+  
+
+/* Como el "quiebre" que da inicio a las pantallas medianas es 768px, voy a crear una versión de ciertos elementos para que se adapten bien a una pantalla chica*/
+@media (max-width: 767px) {
+
+    .section-contacto {
+        text-align: center;
+    }
+
+    fieldset input, 
+    fieldset textarea, 
+    fieldset select {
+        width: 100%; /* Ajusta todos los inputs al 100% del fieldset */
+        margin-top: 10px; /* Espacio entre los elementos */
+    }
+
+}
